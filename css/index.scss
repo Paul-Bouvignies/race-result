@@ -1,0 +1,726 @@
+/*
+* import des typographies
+*/
+// font formula 1 BLACK
+@font-face {
+  font-family: "Formula1-Black";
+  src: url("../assets/typographies/formula1-black/Formula1-Display-Black.svg#Formula1-Display-Black")
+      format("svg"),
+    url("../assets/typographies/formula1-black/Formula1-Display-Black.ttf")
+      format("truetype"),
+    url("../assets/typographies/formula1-black/Formula1-Display-Black.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+// font formula 1 BOLD
+@font-face {
+  font-family: "Formula1-Bold";
+  src: url("../assets/typographies/formula1-bold/Formula1-Display-Bold.svg#Formula1-Display-Bold")
+      format("svg"),
+    url("../assets/typographies/formula1-bold/Formula1-Display-Bold.ttf")
+      format("truetype"),
+    url("../assets/typographies/formula1-bold/Formula1-Display-Bold.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+// font formula 1 REGULAR
+@font-face {
+  font-family: "Formula1-Regular";
+  src: url("../assets/typographies/formula1-regular/Formula1-Display-Regular.svg#Formula1-Display-Regular")
+      format("svg"),
+    url("../assets/typographies/formula1-regular/Formula1-Display-Regular.ttf")
+      format("truetype"),
+    url("../assets/typographies/formula1-regular/Formula1-Display-Regular.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+// font formula 1 WIDE
+@font-face {
+  font-family: "Formula1-Wide";
+  src: url("../assets/typographies/formula1-Wide/Formula1-Display-Wide.svg#Formula1-Display-Wide")
+      format("svg"),
+    url("../assets/typographies/formula1-Wide/Formula1-Display-Wide.ttf")
+      format("truetype"),
+    url("../assets/typographies/formula1-Wide/Formula1-Display-Wide.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CorporateS-Light";
+  src: url("../assets/typographies/corporate-light/CorporateS-Light.eot");
+  src: url("../assets/typographies/corporate-light/CorporateS-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/typographies/corporate-light/CorporateS-Light.svg#../assets/typographies/corporate-light/CorporateS-Light")
+      format("svg"),
+    url("../assets/typographies/corporate-light/CorporateS-Light.ttf")
+      format("truetype"),
+    url("../assets/typographies/corporate-light/CorporateS-Light.woff") format("woff"),
+    url("../assets/typographies/corporate-light/CorporateS-Light.woff2")
+      format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+* RESET
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+body {
+  color: #fff;
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+$red: #ff1e00;
+$black: #15151d;
+$white: #ffffff;
+
+/*
+* header
+*/
+
+header {
+  min-width: 1040px;
+  background-color: $black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.63);
+
+  //box gauche
+  //logo f1 + titre
+  div:nth-child(1) {
+    margin: 1.4rem 1rem;
+    svg:nth-child(1) {
+      width: 100px;
+      height: auto;
+      .fil0,
+      .fil1 {
+        fill: #fff;
+      }
+    }
+
+    h1 {
+      display: inline-block;
+      text-transform: uppercase;
+      font-family: "Formula1-Bold";
+      margin-left: 2rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  //box droite
+  // infos du circuit
+  div:nth-child(2) {
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.4rem;
+
+    .circuit {
+      margin: 0 1.5rem;
+      height: 100%;
+      width: 70px;
+    }
+
+    .flag {
+      margin: 0 1rem;
+      height: 25px;
+      width: 45px;
+    }
+
+    p {
+      display: inline-block;
+      font-family: "CorporateS-Light";
+
+      &:nth-child(1) {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      &:last-child {
+        color: $red;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/*
+* main
+*/
+
+main {
+  height: calc(100vh - 76.1px);
+  background-color: $black;
+  padding: 1.4rem 1rem;
+  min-width: 1040px;
+
+  section {
+    width: 90%;
+    max-width: 1800px;
+    margin: auto;
+  }
+
+  //section de titre des colones
+  // lap1 time, lap2 time, lap3 time, gap, lap
+  #title {
+    justify-content: flex-end;
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-family: "Formula1-Regular";
+      font-size: 0.7rem;
+      opacity: 0.5;
+
+      p:nth-child(-n + 3) {
+        width: 150px;
+      }
+
+      p:nth-child(4) {
+        width: 120px;
+      }
+
+      p:nth-child(5) {
+        width: 40px;
+      }
+    }
+  }
+  //section d'affichage des resultats
+  #result {
+    article {
+      margin: 0.3rem 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s linear;
+
+#gap0{
+  opacity: 0 !important;
+}
+
+      &.hidden {
+        opacity: 0;
+        transform: scale(1.1);
+      }
+
+      &:hover {
+        background-color: rgba(255, 30, 0, 0.5) !important;
+      }
+
+      &:nth-child(2n) {
+        background-color: #22222e;
+      }
+
+      div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .number {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        color: $black;
+        border-radius: 0 0 3px 0;
+        width: 25px;
+        height: 25px;
+        font-family: "Formula1-Bold";
+        font-size: 0.9rem;
+
+        &:hover::before {
+          display: flex;
+        }
+
+        &::before {
+          content: "x";
+          cursor: pointer;
+          border-radius: 0 0 3px 0;
+          display: none;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          color: #fff;
+          width: 100%;
+          font-family: "Formula1-Bold";
+          font-size: 0.9rem;
+          height: 100%;
+          background-color: $red;
+        }
+
+        &::after {
+          content: "";
+          width: 4px;
+          height: 50%;
+          background-color: white;
+          position: absolute;
+          transform: translateX(21px);
+        }
+
+        &.bgc0::after {
+          background-color: #01d2be;
+        }
+        &.bgc2::after {
+          background-color: #db0100;
+        }
+        &.bgc3::after {
+          background-color: #ff8601;
+        }
+        &.bgc4::after {
+          background-color: #f295c7;
+        }
+        &.bgc5::after {
+          background-color: #ffffff;
+        }
+        &.bgc6::after {
+          background-color: #fef400;
+        }
+        &.bgc7::after {
+          background-color: #9a0001;
+        }
+        &.bgc8::after {
+          background-color: #0081f9;
+        }
+        &.bgc9::after {
+          background-color: #0081f9;
+        }
+        &.bgc10::after {
+          background-color: #777777;
+        }
+        &.bgc11::after {
+          background-color: #01d2be;
+        }
+        &.bgc12::after {
+          background-color: #db0100;
+        }
+        &.bgc13::after {
+          background-color: #ff8601;
+        }
+        &.bgc14::after {
+          background-color: #f295c7;
+        }
+        &.bgc15::after {
+          background-color: #ffffff;
+        }
+        &.bgc16::after {
+          background-color: #fef400;
+        }
+        &.bgc17::after {
+          background-color: #9a0001;
+        }
+        &.bgc18::after {
+          background-color: #0081f9;
+        }
+        &.bgc19::after {
+          background-color: #0081f9;
+        }
+        &.bgc20::after {
+          background-color: #777777;
+        }
+      }
+      &:nth-child(1) .number {
+        background-color: #dda431;
+        color: #fff;
+      }
+      &:nth-child(2) .number {
+        background-color: #969092;
+        color: #fff;
+      }
+      &:nth-child(3) .number {
+        background-color: #d47936;
+        color: #fff;
+      }
+
+      .name {
+        letter-spacing: 0.05em;
+        width: 250px;
+        margin-left: 1rem;
+        text-transform: uppercase;
+        font-family: "Formula1-Bold";
+        font-size: 0.9rem;
+      }
+
+      .time1,
+      .time2,
+      .time3 {
+        width: 150px;
+        text-transform: uppercase;
+        font-family: "Formula1-Regular";
+        font-size: 0.9rem;
+      }
+
+      .gap {
+        width: 120px;
+        text-transform: uppercase;
+        font-family: "Formula1-Regular";
+        font-size: 0.9rem;
+      }
+
+      .lap {
+        text-align: center;
+        width: 40px;
+        font-family: "Formula1-Regular";
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  // ajout d'un player avec son temps
+  #add {
+    span {
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: $white;
+      color: $black;
+      border-radius: 0 0 3px 0;
+      width: 25px;
+      height: 25px;
+      font-family: "Formula1-Bold";
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    #PopupPlayer {
+      display: none;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.1s linear;
+      opacity: 1;
+      transform: scale(1);
+
+      &.hidden {
+        opacity: 0;
+        transform: scale(1.1);
+      }
+
+      form {
+        position: relative;
+        background-color: #212125;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 4px;
+        border: 0.5px solid rgb(255, 255, 255);
+        width: 500px;
+
+        #cross {
+          cursor: pointer;
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          path {
+            fill: rgba(255, 255, 255, 0.5) !important;
+          }
+        }
+
+        h2 {
+          margin: auto;
+          font-family: "Formula1-Bold";
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          color: #fff;
+        }
+
+        fieldset {
+          margin: 1rem 0;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 90%;
+          border: none;
+
+          input {
+            padding: 0.4rem;
+            background-color: transparent;
+            border: 0.5px solid rgb(255, 255, 255);
+            margin: 0.2rem;
+            border-radius: 0 0 3px 0;
+            color: #fff;
+            font-size: 1rem;
+            font-family: "CorporateS-Light";
+
+            &.invalid {
+              border: 0.5px solid red !important;
+              background-color: rgba(255, 0, 0, 0.3) !important;
+            }
+
+            &.valid {
+              border: 0.5px solid green !important;
+              background-color: rgba(0, 128, 0, 0.4) !important;
+            }
+          }
+
+          input:nth-child(1) {
+            width: 100%;
+          }
+
+          input:nth-child(n + 2) {
+            width: calc((100% - 1.2rem) / 3);
+          }
+        }
+
+        #error {
+          padding: 0.4rem;
+          width: 90%;
+          color: $red;
+          font-size: 1.2rem;
+          letter-spacing: 0.05em;
+          //font-family: "Formula1-Regular";
+          font-family: "CorporateS-Light";
+
+          p {
+            margin: 0.2rem;
+
+            &:nth-child(1) {
+              margin-top: 1rem;
+            }
+          }
+        }
+
+        button {
+          cursor: pointer;
+          display: inline-block;
+          background-color: $white;
+          color: $black;
+          border-radius: 0 0 3px 0;
+          font-family: "Formula1-Regular";
+          font-size: 1rem;
+          text-transform: uppercase;
+          padding: 0.5rem 1.6rem;
+          outline: none;
+          border: none;
+        }
+      }
+    }
+  }
+
+  //selection de la course
+  #PopupRace {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s linear;
+    opacity: 1;
+    transform: scale(1);
+
+    &.hidden {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+
+    div:nth-child(1) {
+      position: relative;
+      background-color: #212125;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 4px;
+      border: 0.5px solid rgb(255, 255, 255);
+      width: 620px;
+
+      h2 {
+        margin: auto;
+        font-family: "Formula1-Bold";
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0.2rem 0 1.2rem 0;
+      }
+
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        //height: 286px;
+
+        form {
+          width: 280px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          input {
+            padding: 0.4rem;
+            background-color: transparent;
+            border: 0.5px solid rgb(255, 255, 255);
+            border-radius: 0 0 3px 0;
+            color: #fff;
+            font-size: 1rem;
+            width: 100%;
+            font-family: "CorporateS-Light";
+          }
+          ul {
+            margin: 0.5rem 0;
+            width: 100%;
+            height: 220px;
+            max-height: 220px;
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+              background-color: rgba(255, 255, 255, 0.178);
+              width: 10px;
+              &-thumb {
+                cursor: pointer;
+                border-radius: 0 0 3px 0;
+                background-color: rgba(255, 255, 255, 0.5);
+              }
+            }
+            li {
+              width: 98%;
+              cursor: pointer;
+              border: 0.5px solid rgb(255, 255, 255);
+              border-radius: 0 0 3px 0;
+              background-color: rgba(255, 255, 255, 0.178);
+              padding: 0.5rem;
+              margin-top: 0.3rem;
+              font-family: "CorporateS-Light";
+              font-size: 1rem;
+              &:nth-child(1){
+                margin-top: 0;
+              }
+              &:hover {
+                background-color: rgba(255, 255, 255, 0.5);
+              }
+              &.selected {
+                background-color: rgba(255, 255, 255, 0.5);
+              }
+            }
+          }
+          button {
+            cursor: pointer;
+            display: inline-block;
+            background-color: $white;
+            color: $black;
+            border-radius: 0 0 3px 0;
+            font-family: "Formula1-Regular";
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 0.5rem 0;
+            width: 100%;
+            outline: none;
+            border: none;
+            opacity: 1;
+            &.inactive {
+              opacity: 0.5;
+            }
+          }
+        }
+        #visualiseInfo {
+          width: 280px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          height: 303px;
+          border-radius: 0 0 3px 0;
+          background-color: #fff;
+          border: 0.5px solid rgb(255, 255, 255);
+          background-color: rgba(255, 255, 255, 0.178);
+          ///background-image: url(../images/circuit/circuit2.svg);
+          background-size: 75%;
+          background-repeat: no-repeat;
+          background-position: center 30%;
+          fill: red;
+
+          div {
+            border-top: 0.5px solid rgb(255, 255, 255);
+            border-radius: 0 0 3px 0;
+            background-color: #ffffff80;
+            display: flex;
+            justify-content: center;
+            height: 50px;
+
+            img {
+              width: auto;
+              height: 30px;
+              margin: 0.2rem 0.6rem 0.2rem 0;
+            }
+            p {
+              font-family: "Formula1-Regular";
+              font-size: 1.2rem;
+              text-transform: uppercase;
+            }
+          }
+
+          img {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+//gestion de l'impression
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+    background-color: $black;
+  }
+  #add {
+    display: none;
+  }
+}
+
+#result,
+#title,
+#add {
+  display: none;
+}

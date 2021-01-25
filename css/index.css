@@ -1,0 +1,862 @@
+/*
+* import des typographies
+*/
+@font-face {
+  font-family: "Formula1-Black";
+  src: url("../assets/typographies/formula1-black/Formula1-Display-Black.svg#Formula1-Display-Black") format("svg"), url("../assets/typographies/formula1-black/Formula1-Display-Black.ttf") format("truetype"), url("../assets/typographies/formula1-black/Formula1-Display-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formula1-Bold";
+  src: url("../assets/typographies/formula1-bold/Formula1-Display-Bold.svg#Formula1-Display-Bold") format("svg"), url("../assets/typographies/formula1-bold/Formula1-Display-Bold.ttf") format("truetype"), url("../assets/typographies/formula1-bold/Formula1-Display-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formula1-Regular";
+  src: url("../assets/typographies/formula1-regular/Formula1-Display-Regular.svg#Formula1-Display-Regular") format("svg"), url("../assets/typographies/formula1-regular/Formula1-Display-Regular.ttf") format("truetype"), url("../assets/typographies/formula1-regular/Formula1-Display-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formula1-Wide";
+  src: url("../assets/typographies/formula1-Wide/Formula1-Display-Wide.svg#Formula1-Display-Wide") format("svg"), url("../assets/typographies/formula1-Wide/Formula1-Display-Wide.ttf") format("truetype"), url("../assets/typographies/formula1-Wide/Formula1-Display-Wide.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CorporateS-Light";
+  src: url("../assets/typographies/corporate-light/CorporateS-Light.eot");
+  src: url("../assets/typographies/corporate-light/CorporateS-Light.eot?#iefix") format("embedded-opentype"), url("../assets/typographies/corporate-light/CorporateS-Light.svg#../assets/typographies/corporate-light/CorporateS-Light") format("svg"), url("../assets/typographies/corporate-light/CorporateS-Light.ttf") format("truetype"), url("../assets/typographies/corporate-light/CorporateS-Light.woff") format("woff"), url("../assets/typographies/corporate-light/CorporateS-Light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+* RESET
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  color: #fff;
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*
+* header
+*/
+header {
+  min-width: 1040px;
+  background-color: #15151d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.63);
+}
+
+header div:nth-child(1) {
+  margin: 1.4rem 1rem;
+}
+
+header div:nth-child(1) svg:nth-child(1) {
+  width: 100px;
+  height: auto;
+}
+
+header div:nth-child(1) svg:nth-child(1) .fil0,
+header div:nth-child(1) svg:nth-child(1) .fil1 {
+  fill: #fff;
+}
+
+header div:nth-child(1) h1 {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "Formula1-Bold";
+  margin-left: 2rem;
+  font-size: 1.6rem;
+}
+
+header div:nth-child(2) {
+  margin: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.4rem;
+}
+
+header div:nth-child(2) .circuit {
+  margin: 0 1.5rem;
+  height: 100%;
+  width: 70px;
+}
+
+header div:nth-child(2) .flag {
+  margin: 0 1rem;
+  height: 25px;
+  width: 45px;
+}
+
+header div:nth-child(2) p {
+  display: inline-block;
+  font-family: "CorporateS-Light";
+}
+
+header div:nth-child(2) p:nth-child(1) {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header div:nth-child(2) p:last-child {
+  color: #ff1e00;
+  font-weight: bold;
+}
+
+/*
+* main
+*/
+main {
+  height: calc(100vh - 76.1px);
+  background-color: #15151d;
+  padding: 1.4rem 1rem;
+  min-width: 1040px;
+}
+
+main section {
+  width: 90%;
+  max-width: 1800px;
+  margin: auto;
+}
+
+main #title {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main #title div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Formula1-Regular";
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+
+main #title div p:nth-child(-n + 3) {
+  width: 150px;
+}
+
+main #title div p:nth-child(4) {
+  width: 120px;
+}
+
+main #title div p:nth-child(5) {
+  width: 40px;
+}
+
+main #result article {
+  margin: 0.3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+main #result article #gap0 {
+  opacity: 0 !important;
+}
+
+main #result article.hidden {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main #result article:hover {
+  background-color: rgba(255, 30, 0, 0.5) !important;
+}
+
+main #result article:nth-child(2n) {
+  background-color: #22222e;
+}
+
+main #result article div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #result article .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  color: #15151d;
+  border-radius: 0 0 3px 0;
+  width: 25px;
+  height: 25px;
+  font-family: "Formula1-Bold";
+  font-size: 0.9rem;
+}
+
+main #result article .number:hover::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #result article .number::before {
+  content: "x";
+  cursor: pointer;
+  border-radius: 0 0 3px 0;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  font-family: "Formula1-Bold";
+  font-size: 0.9rem;
+  height: 100%;
+  background-color: #ff1e00;
+}
+
+main #result article .number::after {
+  content: "";
+  width: 4px;
+  height: 50%;
+  background-color: white;
+  position: absolute;
+  -webkit-transform: translateX(21px);
+          transform: translateX(21px);
+}
+
+main #result article .number.bgc0::after {
+  background-color: #01d2be;
+}
+
+main #result article .number.bgc2::after {
+  background-color: #db0100;
+}
+
+main #result article .number.bgc3::after {
+  background-color: #ff8601;
+}
+
+main #result article .number.bgc4::after {
+  background-color: #f295c7;
+}
+
+main #result article .number.bgc5::after {
+  background-color: #ffffff;
+}
+
+main #result article .number.bgc6::after {
+  background-color: #fef400;
+}
+
+main #result article .number.bgc7::after {
+  background-color: #9a0001;
+}
+
+main #result article .number.bgc8::after {
+  background-color: #0081f9;
+}
+
+main #result article .number.bgc9::after {
+  background-color: #0081f9;
+}
+
+main #result article .number.bgc10::after {
+  background-color: #777777;
+}
+
+main #result article .number.bgc11::after {
+  background-color: #01d2be;
+}
+
+main #result article .number.bgc12::after {
+  background-color: #db0100;
+}
+
+main #result article .number.bgc13::after {
+  background-color: #ff8601;
+}
+
+main #result article .number.bgc14::after {
+  background-color: #f295c7;
+}
+
+main #result article .number.bgc15::after {
+  background-color: #ffffff;
+}
+
+main #result article .number.bgc16::after {
+  background-color: #fef400;
+}
+
+main #result article .number.bgc17::after {
+  background-color: #9a0001;
+}
+
+main #result article .number.bgc18::after {
+  background-color: #0081f9;
+}
+
+main #result article .number.bgc19::after {
+  background-color: #0081f9;
+}
+
+main #result article .number.bgc20::after {
+  background-color: #777777;
+}
+
+main #result article:nth-child(1) .number {
+  background-color: #dda431;
+  color: #fff;
+}
+
+main #result article:nth-child(2) .number {
+  background-color: #969092;
+  color: #fff;
+}
+
+main #result article:nth-child(3) .number {
+  background-color: #d47936;
+  color: #fff;
+}
+
+main #result article .name {
+  letter-spacing: 0.05em;
+  width: 250px;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  font-family: "Formula1-Bold";
+  font-size: 0.9rem;
+}
+
+main #result article .time1,
+main #result article .time2,
+main #result article .time3 {
+  width: 150px;
+  text-transform: uppercase;
+  font-family: "Formula1-Regular";
+  font-size: 0.9rem;
+}
+
+main #result article .gap {
+  width: 120px;
+  text-transform: uppercase;
+  font-family: "Formula1-Regular";
+  font-size: 0.9rem;
+}
+
+main #result article .lap {
+  text-align: center;
+  width: 40px;
+  font-family: "Formula1-Regular";
+  font-size: 0.9rem;
+}
+
+main #add span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  color: #15151d;
+  border-radius: 0 0 3px 0;
+  width: 25px;
+  height: 25px;
+  font-family: "Formula1-Bold";
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main #add #PopupPlayer {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+main #add #PopupPlayer.hidden {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main #add #PopupPlayer form {
+  position: relative;
+  background-color: #212125;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 0.5px solid white;
+  width: 500px;
+}
+
+main #add #PopupPlayer form #cross {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+main #add #PopupPlayer form #cross path {
+  fill: rgba(255, 255, 255, 0.5) !important;
+}
+
+main #add #PopupPlayer form h2 {
+  margin: auto;
+  font-family: "Formula1-Bold";
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+main #add #PopupPlayer form fieldset {
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  border: none;
+}
+
+main #add #PopupPlayer form fieldset input {
+  padding: 0.4rem;
+  background-color: transparent;
+  border: 0.5px solid white;
+  margin: 0.2rem;
+  border-radius: 0 0 3px 0;
+  color: #fff;
+  font-size: 1rem;
+  font-family: "CorporateS-Light";
+}
+
+main #add #PopupPlayer form fieldset input.invalid {
+  border: 0.5px solid red !important;
+  background-color: rgba(255, 0, 0, 0.3) !important;
+}
+
+main #add #PopupPlayer form fieldset input.valid {
+  border: 0.5px solid green !important;
+  background-color: rgba(0, 128, 0, 0.4) !important;
+}
+
+main #add #PopupPlayer form fieldset input:nth-child(1) {
+  width: 100%;
+}
+
+main #add #PopupPlayer form fieldset input:nth-child(n + 2) {
+  width: calc((100% - 1.2rem) / 3);
+}
+
+main #add #PopupPlayer form #error {
+  padding: 0.4rem;
+  width: 90%;
+  color: #ff1e00;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  font-family: "CorporateS-Light";
+}
+
+main #add #PopupPlayer form #error p {
+  margin: 0.2rem;
+}
+
+main #add #PopupPlayer form #error p:nth-child(1) {
+  margin-top: 1rem;
+}
+
+main #add #PopupPlayer form button {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #15151d;
+  border-radius: 0 0 3px 0;
+  font-family: "Formula1-Regular";
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1.6rem;
+  outline: none;
+  border: none;
+}
+
+main #PopupRace {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+main #PopupRace.hidden {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main #PopupRace div:nth-child(1) {
+  position: relative;
+  background-color: #212125;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 0.5px solid white;
+  width: 620px;
+}
+
+main #PopupRace div:nth-child(1) h2 {
+  margin: auto;
+  font-family: "Formula1-Bold";
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0.2rem 0 1.2rem 0;
+}
+
+main #PopupRace div:nth-child(1) div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+main #PopupRace div:nth-child(1) div form {
+  width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #PopupRace div:nth-child(1) div form input {
+  padding: 0.4rem;
+  background-color: transparent;
+  border: 0.5px solid white;
+  border-radius: 0 0 3px 0;
+  color: #fff;
+  font-size: 1rem;
+  width: 100%;
+  font-family: "CorporateS-Light";
+}
+
+main #PopupRace div:nth-child(1) div form ul {
+  margin: 0.5rem 0;
+  width: 100%;
+  height: 220px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+main #PopupRace div:nth-child(1) div form ul::-webkit-scrollbar {
+  background-color: rgba(255, 255, 255, 0.178);
+  width: 10px;
+}
+
+main #PopupRace div:nth-child(1) div form ul::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 0 0 3px 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+main #PopupRace div:nth-child(1) div form ul li {
+  width: 98%;
+  cursor: pointer;
+  border: 0.5px solid white;
+  border-radius: 0 0 3px 0;
+  background-color: rgba(255, 255, 255, 0.178);
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  font-family: "CorporateS-Light";
+  font-size: 1rem;
+}
+
+main #PopupRace div:nth-child(1) div form ul li:nth-child(1) {
+  margin-top: 0;
+}
+
+main #PopupRace div:nth-child(1) div form ul li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+main #PopupRace div:nth-child(1) div form ul li.selected {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+main #PopupRace div:nth-child(1) div form button {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #15151d;
+  border-radius: 0 0 3px 0;
+  font-family: "Formula1-Regular";
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+  width: 100%;
+  outline: none;
+  border: none;
+  opacity: 1;
+}
+
+main #PopupRace div:nth-child(1) div form button.inactive {
+  opacity: 0.5;
+}
+
+main #PopupRace div:nth-child(1) div #visualiseInfo {
+  width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 303px;
+  border-radius: 0 0 3px 0;
+  background-color: #fff;
+  border: 0.5px solid white;
+  background-color: rgba(255, 255, 255, 0.178);
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  fill: red;
+}
+
+main #PopupRace div:nth-child(1) div #visualiseInfo div {
+  border-top: 0.5px solid white;
+  border-radius: 0 0 3px 0;
+  background-color: #ffffff80;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+}
+
+main #PopupRace div:nth-child(1) div #visualiseInfo div img {
+  width: auto;
+  height: 30px;
+  margin: 0.2rem 0.6rem 0.2rem 0;
+}
+
+main #PopupRace div:nth-child(1) div #visualiseInfo div p {
+  font-family: "Formula1-Regular";
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+main #PopupRace div:nth-child(1) div #visualiseInfo img {
+  width: 200px;
+}
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+    background-color: #15151d;
+  }
+  #add {
+    display: none;
+  }
+}
+
+#result,
+#title,
+#add {
+  display: none;
+}
+/*# sourceMappingURL=index.css.map */

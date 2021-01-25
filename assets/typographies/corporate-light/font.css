@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'CorporateS-Light';
+  src: url('CorporateS-Light.eot');
+  src: url('CorporateS-Light.eot?#iefix') format('embedded-opentype'),
+       url('CorporateS-Light.svg#CorporateS-Light') format('svg'),
+       url('CorporateS-Light.ttf') format('truetype'),
+       url('CorporateS-Light.woff') format('woff'),
+       url('CorporateS-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
