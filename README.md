@@ -13,3 +13,4 @@ F1 RACE CLASSIFICATION est une petite application web de classement de score pou
 
 
 [DEMO](https://www.paulbouvignies.fr/ressources/F1-RACE-CLASSIFICATION/index.html)
+[![DEMO](https://img.shields.io/badge/DEMO-yellow.svg?&style=for-the-badge)](https://www.paulbouvignies.fr/ressources/CHIFUMY/index.html)
